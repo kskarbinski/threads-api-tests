@@ -1,0 +1,2 @@
+class MethodNotAllowed(Exception):
+    pass
