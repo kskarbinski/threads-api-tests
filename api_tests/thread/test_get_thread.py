@@ -23,7 +23,7 @@ class GetThreadTestSuite(ModelValidationTestCase):
         thread_model = ThreadActions(actor=self.actor).get_thread(thread_id=self.thread_model.id)
 
         self.assertThreadModel(thread_model)
-        self.assertModelsAreEqual(self.thread_model, thread_model)
+        self.assertModelsAreEqual(self.thread_model, thread_model, ignore_attributes=["updated_at"])
 
     def test_get_threads_as_unauthorized_user(self):
         # Assert unable to get thread by id as unauthorized user

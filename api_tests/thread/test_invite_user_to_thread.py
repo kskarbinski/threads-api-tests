@@ -41,7 +41,8 @@ class InviteUserToThreadTestSuite(ModelValidationTestCase):
         self.assertEqual(thread_invitation_models[0].users_in_thread, [self.user_model1.id])
         # Assert actor2 got invited
         user2_thread_invitation_model = ThreadActions(actor=self.actor2).get_received_thread_invitations()
-        self.assertModelsAreEqual(thread_invitation_models[0], user2_thread_invitation_model[0])
+        self.assertModelsAreEqual(thread_invitation_models[0], user2_thread_invitation_model[0],
+                                  ignore_attributes=["updated_at"])
 
     def test_invite_multiple_users_to_thread(self):
         # actor1 invites actor2
