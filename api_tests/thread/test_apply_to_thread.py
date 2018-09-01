@@ -35,7 +35,8 @@ class ApplyToThreadTestSuite(ModelValidationTestCase):
         thread_application_models = ThreadActions(actor=self.actor1).get_received_thread_applications(
             thread_id=self.thread_model.id
         )
-        self.assertModelsAreEqual(thread_application_model, thread_application_models[0])
+        self.assertModelsAreEqual(thread_application_model, thread_application_models[0],
+                                  ignore_attributes=["updated_at"])
 
     def test_apply_to_non_existant_thread(self):
         # Assert unable to apply to non existant thread

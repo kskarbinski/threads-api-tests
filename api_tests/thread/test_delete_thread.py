@@ -24,7 +24,7 @@ class DeleteThreadTestSuite(ModelValidationTestCase):
 
         # Assert thread has been marked as deleted
         self.assertThreadModel(thread_model)
-        self.assertModelsAreEqual(self.thread_model, thread_model, ignore_attributes=["deleted"])
+        self.assertModelsAreEqual(self.thread_model, thread_model, ignore_attributes=["deleted", "updated_at"])
         self.assertTrue(thread_model.deleted)
 
     def test_delete_thread_as_not_owner(self):

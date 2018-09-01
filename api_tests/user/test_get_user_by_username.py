@@ -26,7 +26,7 @@ class GetUserByUsername(ModelValidationTestCase):
 
         # Assert correct model has been returned
         self.assertUserModel(user_model)
-        self.assertModelsAreEqual(model1=self.signup_user_model, model2=user_model)
+        self.assertModelsAreEqual(model1=self.signup_user_model, model2=user_model, ignore_attributes=["updated_at"])
 
     def test_get_user_by_username_as_unauthorized_user(self):
         # Assert unable to get user by username as unauthorized user
