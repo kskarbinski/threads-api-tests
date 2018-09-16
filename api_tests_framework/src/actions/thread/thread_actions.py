@@ -43,7 +43,7 @@ class ThreadActions(BaseActions):
         response = ThreadsHandler(actor=self.actor).get()
 
         # Parse models
-        models = [ThreadModel(external_model=external_model) for external_model in response.json()["threads"]]
+        models = [ThreadModel(external_model=external_model) for external_model in response.json()["items"]]
 
         return models
 
@@ -98,7 +98,7 @@ class ThreadActions(BaseActions):
 
         # Parse models
         models = [ThreadInvitationModel(external_model=external_model)
-                  for external_model in response.json()["invitations"]]
+                  for external_model in response.json()["items"]]
 
         return models
 
@@ -108,7 +108,7 @@ class ThreadActions(BaseActions):
 
         # Parse models
         models = [ThreadApplicationModel(external_model=external_model)
-                  for external_model in response.json()["applications"]]
+                  for external_model in response.json()["items"]]
 
         return models
 
@@ -117,7 +117,7 @@ class ThreadActions(BaseActions):
         response = ThreadsIdMessagesHandler(actor=self.actor).get(thread_id=thread_id)
 
         # Parse models
-        models = [ThreadMessageModel(external_model=external_model) for external_model in response.json()["messages"]]
+        models = [ThreadMessageModel(external_model=external_model) for external_model in response.json()["items"]]
 
         return models
 
@@ -139,7 +139,7 @@ class ThreadActions(BaseActions):
 
         # Parse models
         models = [ThreadInvitationModel(external_model=external_model)
-                  for external_model in response.json()["invitations"]]
+                  for external_model in response.json()["items"]]
 
         return models
 
@@ -149,7 +149,7 @@ class ThreadActions(BaseActions):
 
         # Parse models
         models = [ThreadApplicationModel(external_model=external_model)
-                  for external_model in response.json()["applications"]]
+                  for external_model in response.json()["items"]]
 
         return models
 

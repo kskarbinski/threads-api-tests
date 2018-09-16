@@ -38,7 +38,7 @@ class UserActions(BaseActions):
         response = UsersHandler(actor=self.actor).get()
 
         # Parse models
-        models = [UserModel(external_model=external_model) for external_model in response.json()["users"]]
+        models = [UserModel(external_model=external_model) for external_model in response.json()["items"]]
 
         return models
 
