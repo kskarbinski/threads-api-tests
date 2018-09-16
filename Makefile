@@ -10,5 +10,5 @@ export PYTHONPATH
 export PATH
 
 test:
-	# pytest -s api_tests/thread/test_reject_received_invitation.py::RejectReceivedInvitationTestSuite::test_reject_received_invitation_as_invitee
+	# pytest -s api_tests/user/test_get_users.py::GetUserTestSuite::test_get_users
 	pytest -s api_tests
