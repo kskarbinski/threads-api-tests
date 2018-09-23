@@ -18,7 +18,7 @@ class BaseHandler(object):
             timeout = self._timeout
         # Prepend forward slash if, for example, api/users is provided instead of /api/users
         if not url.startswith("/"):
-            url += "/"
+            url = "/" + url
         # Remove any params that are None to not send them at all
         if params is not None:
             params = remove_none_from_keys_from_dict(params)
