@@ -9,7 +9,7 @@ def add_exception(cls):
 
 
 def from_status_code(status_code, msg):
-    exception_cls = http_exceptions.get(status_code) or HttpException
+    exception_cls = http_exceptions.get(status_code, HttpException)
     return exception_cls(msg=msg)
 
 
