@@ -1,5 +1,5 @@
 def remove_none_from_keys_from_dict(dictionary):
-    return {k: v for k, v in dictionary.iteritems() if v is not None}
+    return {k: v for k, v in dictionary.items() if v is not None}
 
 
 def vars_recursive(obj, ignore_attributes=None):

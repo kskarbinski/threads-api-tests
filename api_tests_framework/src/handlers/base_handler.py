@@ -7,7 +7,7 @@ from api_tests_framework.utils.errors.http_exceptions import from_status_code
 
 class BaseHandler(object):
     def __init__(self, actor):
-        self._base_url = environ.get("BASE_URL") or "http://127.0.0.1:5000"
+        self._base_url = environ.get("BASE_URL", "http://127.0.0.1:5000")
         self._timeout = 10
         self.actor = actor
 

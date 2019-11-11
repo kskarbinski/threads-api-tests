@@ -16,8 +16,8 @@ class GetThreadsTestSuite(ModelValidationTestCase):
         self.user_model = UserActions(actor=self.actor).signup()
 
         # actor creates threads
-        self.thread_models = [ThreadActions(actor=self.actor).create_thread() for _ in xrange(10)]
-        self.private_thread_models = [ThreadActions(actor=self.actor).create_thread(private=True) for _ in xrange(3)]
+        self.thread_models = [ThreadActions(actor=self.actor).create_thread() for _ in range(10)]
+        self.private_thread_models = [ThreadActions(actor=self.actor).create_thread(private=True) for _ in range(3)]
 
     def test_get_threads(self):
         # Create actor2 and signup

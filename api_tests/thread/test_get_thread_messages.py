@@ -11,7 +11,7 @@ from api_tests_framework.src.actions.thread import ThreadActions
 class GetThreadMessagesTestSuite(ModelValidationTestCase):
     def setUp(self):
         # Create actor1, actor2, actor3 and actor4
-        self.actor1, self.actor2, self.actor3, self.actor4 = [Actor() for _ in xrange(4)]
+        self.actor1, self.actor2, self.actor3, self.actor4 = [Actor() for _ in range(4)]
 
         # actors sign up
         self.user_model1, self.user_model2, self.user_model3, self.user_model4 = (

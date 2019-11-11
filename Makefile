@@ -10,5 +10,5 @@ export PYTHONPATH
 export PATH
 
 test:
-	# pytest -s api_tests/user/test_get_users.py::GetUserTestSuite::test_get_users
+	# pytest -s api_tests/user/test_signup.py::SignupTestSuite::test_signup_empty_firstname
 	pytest -s api_tests
